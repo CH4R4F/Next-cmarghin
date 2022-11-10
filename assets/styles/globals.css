@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hero {
+    background: radial-gradient(
+      circle at bottom center,
+      #5465ff56,
+      #cccfea 30%,
+      #fff 100%
+    );
+  }
+  .hero-dark {
+    background: radial-gradient(
+      circle at bottom center,
+      #929dff4a,
+      #191a29 60%,
+      #161724 100%
+    );
+  }
+  .btn {
+    @apply rounded-sm font-medium bg-gradient-to-tr from-[#6978FF] to-dark-primary text-white hover:shadow-none duration-150;
+    padding: 10px 14px;
+  }
+}
+
+body {
+  font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
+  font-weight: 500;
+  overflow-x: hidden !important;
+  @apply dark:bg-dark-bg bg-light-bg dark:text-dark-text text-light-text font-primary;
+}
+
+h1,
+h2,
+h3 {
+  @apply dark:text-dark-heading font-bold font-heading;
+}
+
+.active {
+  @apply text-dark-primary !important;
+}
+
+* {
+  transition: all 0.04s ease-in-out;
+  outline: none;
+}
+.wrapper {
+  @apply w-full max-w-7xl mx-auto;
+}
+
+.hero-title {
+  line-height: 1em;
+}
+
+.fill {
+  @apply bg-light-bg dark:bg-dark-bg;
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  .fill {
+    @apply bg-light-bg/50 dark:bg-dark-bg/50;
+    backdrop-filter: blur(10px);
+  }
+}
+body {
+  height: 1000px;
+}
+.section_title::before {
+  content: "";
+  @apply bg-light-primary absolute left-0 top-0 h-full w-2 rounded-3xl;
+}
+
+.shadow {
+  @apply dark:shadow-light-primary/25 shadow-2xl shadow-[#96a0ff]/30;
+}
