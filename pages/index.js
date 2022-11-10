@@ -14,7 +14,7 @@ const Home = ({ posts }) => {
       </Head>
       <Hero />
       <Services />
-      <FeaturedBlogs posts={posts} />
+      {/* <FeaturedBlogs posts={posts} /> */}
     </>
   );
 };

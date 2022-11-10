@@ -14,6 +14,7 @@ import logo from "../../assets/images/logo.png";
 import logoDark from "../../assets/images/logo-dark.png";
 // custom hook
 import useDarkMode from "../../hooks/useDarkMode";
+import Button from "./Button";
 
 const MobileNav = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,9 +87,7 @@ const DesktopNav = ({ theme, toggleTheme }) => {
         >
           {theme === "dark" ? <BsMoonStars /> : <BsSun />}
         </button>
-        <button className="hidden tablet:block bg-gradient-to-tr from-[#6978FF] to-dark-primary text-white btn shadow hover:shadow-none duration-150 ">
-          <Link href="/contact">Contact Me</Link>
-        </button>
+        <Button href="/contact" text="Contact Me" />
       </div>
     </nav>
   );

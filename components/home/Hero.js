@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import myPicture from "../../assets/images/me.png";
 import { FaHackerrank, FaGithub, FaTwitter } from "react-icons/fa";
+import Button from "../common/Button";
 
 const Hero = () => {
   return (
@@ -35,12 +36,7 @@ const Hero = () => {
             will help <em>ME</em> and people build their own businesses.
           </p>
           <div className="flex items-center justify-center space-x-4">
-            <Link
-              href="/about"
-              className="btn shadow text-center tablet:flex-1"
-            >
-              About Me
-            </Link>
+            <Button href="/about" text="About Me" />
             <div className="flex items-center space-x-4 tablet:flex-1">
               <a
                 className="opacity-70 hover:opacity-100 duration-300"
